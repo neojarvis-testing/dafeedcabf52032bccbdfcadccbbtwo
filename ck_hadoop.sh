@@ -33,11 +33,11 @@ echo "Hadoop started!"
 # hdfs --daemon stop namenode
 # echo "Hadoop stopped!"
  
-echo "🔍 Checking Hadoop..."
-hdfs dfs -mkdir -p /user/hueadmin
-hdfs dfs -chown hueadmin:hueadmin /user/hueadmin
-hdfs dfs -chmod 755 /user/hueadmin
+# echo "🔍 Checking Hadoop..."
+# hdfs dfs -mkdir -p /user/hueadmin
+# hdfs dfs -chown hueadmin:hueadmin /user/hueadmin
+# hdfs dfs -chmod 755 /user/hueadmin
  
 # CLI Check
 echo "[✔] Listing HDFS root directory:"
-hdfs dfs -ls /user/hueadmin/ || echo "❌ HDFS not responding"
+hdfs dfs -rm -r /wordcount-output || echo "❌ HDFS not responding"
