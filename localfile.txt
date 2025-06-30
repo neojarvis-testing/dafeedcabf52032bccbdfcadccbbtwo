@@ -1,0 +1,21 @@
+Lab 2: Exploring Hadoop and HDFS Commands
+
+Objective: Gain hands-on with HDFS commands in pseudo-distributed mode.
+
+Steps:
+
+Start Hadoop in pseudo-distributed mode (or use a Docker setup).
+
+Run basic HDFS commands:
+
+hdfs dfs -mkdir /data
+
+hdfs dfs -put localfile.txt /data/
+
+hdfs dfs -ls /data
+
+hdfs dfs -cat /data/localfile.txt
+
+hdfs fsck /data/localfile.txt -files -blocks
+
+Observe block size, replication factor, and logs.
